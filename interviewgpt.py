@@ -178,7 +178,17 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         raise KeyboardInterrupt
 
     # Add markdown system message if markdown is enabled
-    messages.append({"role": "user", "content": message})
+    # If the message from user is a file path, read the file content
+    if os.path.isfile(message):
+        with open(message, "r") as file:
+            file_content = file.read()
+
+        # Add the content of the file as a user message
+        messages.append({"role": "user", "content": file_content})
+    else:
+        # If not a file path, add the message as usual
+        messages.append({"role": "user", "content": message})
+
 
     # Save messages to file
     with open(HISTORY_FILE, "a") as file:
@@ -232,20 +242,6 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         if should_prompt_for_file(question):
             valid_file = False
             console.print("Please write your response in a separate file and attach the path here.")
-            
-            while not valid_file:
-                # Prompt the user for the file path
-                file_path = input("Enter the file path of your solution: ")
-
-                if not os.path.isfile(file_path):
-                    print("Invalid file path. Please try again.")
-                    continue
-                
-                valid_file = True
-                # Call the function to process the solution
-
-                # Include the solution_code in the body if it is not None
-                # messages.append(process_solution(file_path))
         else:
             print("You can answer in the chat.")
 

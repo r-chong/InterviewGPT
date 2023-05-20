@@ -705,3 +705,65 @@ Write a function in Python that finds the second largest number in a list of int
 print('hello world')
 
 ========== End of Solution Code ==========
+
+# 2023-05-20 14:41:37.519389
++I'm ready
+user: I'm ready
+AI: Great! Let's begin with the first question:
+
+Conceptual question: What is the difference between a stack and a queue data structure? Can you provide an example use case for each?
+
+# 2023-05-20 14:41:47.566393
++I don't know. Next question
+user: I don't know. Next question
+AI: Sure, here's the next question:
+
+Critical thinking question: Given a string containing only parentheses, determine if it is valid. A string is considered valid if all parentheses have a corresponding closing parentheses. For example, "()" is valid, but "((" and ")(" are not. Can you implement a function to determine if a given string is valid?
+
+# 2023-05-20 14:42:12.182401
++Please assess my solution
+user: Please assess my solution
+AI: Please provide your solution and I will be happy to assess it.
+
+# 2023-05-20 14:44:46.741839
++/1
+user: /1
+
+# 2023-05-20 14:44:55.054577
++/q
+
+# 2023-05-20 14:45:07.823450
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+Conceptual Question: What is the difference between a linked list and an array? What are the advantages and disadvantages of using each data structure?
+
+# 2023-05-20 14:45:25.968452
++I'm not sure. Next question
+user: I'm not sure. Next question
+AI: Sure, no problem. Here's another question:
+
+Critical Thinking Question: Write a function to determine if a given string is a palindrome or not.
+
+# 2023-05-20 14:46:04.327462
++/q
+
+# 2023-05-20 14:46:17.945464
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+Conceptual question: What is the difference between a stack and a queue? When would you use one over the other?
+
+# 2023-05-20 14:46:26.240036
++Not sure. Next question
+user: Not sure. Next question
+AI: Sure, no problem.
+
+Critical thinking question: Write a function that takes a string of parentheses and determines if the order of the parentheses is valid. The function should return true if the string is valid and false if it's not valid. For example, `()()()` and `((()))` are valid strings of parentheses, but `())` and `(()))` are not valid.
+
+# 2023-05-20 14:47:07.233481
++D:\pixelboss100\reese_coding\python\InterviewGPT\interviewgpt-cli\testfile.py
+user: D:\pixelboss100\reese_coding\python\InterviewGPT\interviewgpt-cli\testfile.py
+AI: Great job writing this function. Your solution is correct!
