@@ -38,3 +38,10 @@ First Question: Suppose you are given a string representing a sentence. Write a 
 
 # 2023-05-19 22:41:40.307119
 +/q
+
+# 2023-05-19 23:12:20.380597
++Hello
+user: Hello
+AI: Hello! Are you ready to begin the interview?
+user: Hello
+AI: Hello! Are you ready to start the interview?

@@ -9,6 +9,7 @@ import yaml
 
 import firebase_admin
 from firebase_admin import credentials
+from firebase_admin import firestore
 
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
@@ -31,6 +32,31 @@ PRICING_RATE = {
     "gpt-4": {"prompt": 0.03, "completion": 0.06},
     "gpt-4-32k": {"prompt": 0.06, "completion": 0.12},
 }
+
+# Get a Firestore client
+db = firestore.client()
+
+# Function to verify interview key and mark interview as done
+def verify_interview_key(candidate_id, interview_key):
+    # Reference the candidate document
+    candidate_ref = db.collection('candidates').document(candidate_id)
+
+    # Get the candidate document
+    candidate_doc = candidate_ref.get()
+
+    # Verify interview key
+    if candidate_doc.exists:
+        data = candidate_doc.to_dict()
+        saved_key = data.get('interviewKey')
+
+        if saved_key == interview_key:
+            # Interview key is valid, mark interview as done
+            candidate_ref.update({'interviewDone': True})
+            print("Your interview is ready to begin. When you are ready, please prompt the interviewer to start the interview.")
+        else:
+            print("Invalid interview key.")
+    else:
+        print("Candidate not found.")
 
 # messages history list
 # mandatory to pass it @ each API call in order to have conversation
@@ -207,9 +233,8 @@ def main(context, api_key, model) -> None:
     # Display the welcome message
     console.print("InterviewGPT | Revolutionizing online assessments in technology.", style="green bold italic")
     console.print("\nYour activity within this interface will be tracked for evaluation and analysis purposes."
-                  + "\nBy using this program, you agree to the collection and usage of your data for these purposes."
-                  + "\nTo get started, please enter your interview key, which should be provided to you by your interviewer.")
-    console.print("\nPlease enter your key:")
+                  + "\nBy using this program, you agree to the collection and usage of your data for these purposes.")
+    console.print("\nPlease enter your user ID and key, as provided to you by your interviewer.")
 
     # console.print("ChatGPT CLI", style="bold")
     # console.print(f"Model in use: [green bold]{config['model']}")
@@ -228,6 +253,9 @@ def main(context, api_key, model) -> None:
 
     while True:
         try:
+            candidate_id = input("User ID: ")
+            interview_key = input("Interview Key: ")
+            verify_interview_key(candidate_id, interview_key)
             start_prompt(session, config)
         except KeyboardInterrupt:
             continue
