@@ -1,4 +1,5 @@
 #!/bin/env python
+# imports
 
 import atexit
 import click
@@ -27,10 +28,12 @@ BASE_ENDPOINT = "https://api.openai.com/v1"
 ENV_VAR = "OPENAI_API_KEY"
 HISTORY_FILE = Path(WORKDIR, "conversation_history.txt")
 
+# for calculation of how much this costs for api calls
+# we are not using gpt 4
 PRICING_RATE = {
     "gpt-3.5-turbo": {"prompt": 0.002, "completion" :0.002},
-    "gpt-4": {"prompt": 0.03, "completion": 0.06},
-    "gpt-4-32k": {"prompt": 0.06, "completion": 0.12},
+    # "gpt-4": {"prompt": 0.03, "completion": 0.06},
+    # "gpt-4-32k": {"prompt": 0.06, "completion": 0.12},
 }
 
 # Get a Firestore client
@@ -134,13 +137,16 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         "Authorization": f"Bearer {config['api-key']}",
     }
 
+    # this is the little icon that shows where the user can type
     message = session.prompt(HTML(f"<b>> </b>"))
 
+    # Exit if user types /q
     if message.lower() == "/q":
         raise EOFError
     if message.lower() == "":
         raise KeyboardInterrupt
 
+    # Add markdown system message if markdown is enabled
     messages.append({"role": "user", "content": message})
 
     # Save messages to file
@@ -251,6 +257,8 @@ def main(context, api_key, model) -> None:
 
     console.rule()
 
+    # get user id and interview key from user
+    # then validate
     candidate_id = input("User ID: ")
     interview_key = input("Interview Key: ")
     verify_interview_key(candidate_id, interview_key)
