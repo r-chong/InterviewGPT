@@ -28,3 +28,13 @@ Remember to use code blocks with appropriate language tags when submitting your 
 
 # 2023-05-19 00:23:12.664393
 +/q
+
+# 2023-05-19 21:52:37.507995
++Hello I am ready to start
+user: Hello I am ready to start
+AI: Great, let's get started! 
+
+First Question: Suppose you are given a string representing a sentence. Write a function that returns the longest word in the sentence. For example, given the input "I love to code everyday", the function should return "everyday".
+
+# 2023-05-19 22:41:40.307119
++/q

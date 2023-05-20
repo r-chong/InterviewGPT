@@ -7,6 +7,12 @@ import requests
 import sys
 import yaml
 
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+
 from pathlib import Path
 from prompt_toolkit import PromptSession, HTML
 from prompt_toolkit.history import FileHistory
@@ -21,12 +27,10 @@ ENV_VAR = "OPENAI_API_KEY"
 HISTORY_FILE = Path(WORKDIR, "conversation_history.txt")
 
 PRICING_RATE = {
-    "gpt-3.5-turbo": {"prompt": 0.002, "completion": 0.002},
+    "gpt-3.5-turbo": {"prompt": 0.002, "completion" :0.002},
     "gpt-4": {"prompt": 0.03, "completion": 0.06},
     "gpt-4-32k": {"prompt": 0.06, "completion": 0.12},
 }
-
-
 
 # messages history list
 # mandatory to pass it @ each API call in order to have conversation
