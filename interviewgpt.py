@@ -164,6 +164,7 @@ def start_prompt(session: PromptSession, config: dict) -> None:
     if "max_tokens" in config:
         body["max_tokens"] = config["max_tokens"]
 
+    # main prompt call
     try:
         r = requests.post(
             f"{BASE_ENDPOINT}/chat/completions", headers=headers, json=body
