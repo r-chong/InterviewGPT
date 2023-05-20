@@ -8,6 +8,7 @@ import requests
 import sys
 import yaml
 import re
+import datetime
 
 import firebase_admin
 from firebase_admin import credentials
@@ -87,6 +88,18 @@ def process_solution(file_path):
         solution_code = file.read()
 
     console.print("received. processing...")
+
+    # Get the current timestamp
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+
+    # Format the file contents
+    formatted_solution = f"\n\n========== Solution Code ==========\n\n{solution_code}\n\n========== End of Solution Code ==========\n"
+    
+    # Append the formatted solution to conversation_history.txt
+    with open('conversation_history.txt', 'a') as history_file:
+        history_file.write(formatted_solution)
+    
+    return solution_code
 
 def load_config(config_file: str) -> dict:
     """
@@ -209,8 +222,13 @@ def start_prompt(session: PromptSession, config: dict) -> None:
             console.print(message_response["content"].strip())
         console.line()
 
+        # Save AI response to file
+        with open(HISTORY_FILE, "a") as file:
+            file.write(f"AI: {message_response['content'].strip()}\n")
+
         # Example usage
         question = message_response["content"].strip()
+        solution_code = None
         if should_prompt_for_file(question):
             valid_file = False
             console.print("Please write your response in a separate file and attach the path here.")
@@ -225,7 +243,9 @@ def start_prompt(session: PromptSession, config: dict) -> None:
                 
                 valid_file = True
                 # Call the function to process the solution
-                process_solution(file_path)
+
+                # Include the solution_code in the body if it is not None
+                # messages.append(process_solution(file_path))
         else:
             print("You can answer in the chat.")
 
@@ -233,10 +253,6 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         messages.append(message_response)
         prompt_tokens += usage_response["prompt_tokens"]
         completion_tokens += usage_response["completion_tokens"]
-
-        # Save AI response to file
-        with open(HISTORY_FILE, "a") as file:
-            file.write(f"AI: {message_response['content'].strip()}\n")
 
     # ... (rest of the code remains the same)
 

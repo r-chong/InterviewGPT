@@ -452,3 +452,256 @@ user: next question
 AI: Okay, here's your next question:
 
 Coding question: Write a function that takes an array of integers and returns the second largest number.
+
+# 2023-05-20 11:53:19.659264
++/q
+
+# 2023-05-20 11:53:33.789277
++I'm ready
+user: I'm ready
+AI: Great! Let's get started with the first question:
+
+Conceptual Question:
+Explain the difference between a stack and a queue. When would you use one over the other?
+
+# 2023-05-20 11:53:39.422447
++next question
+user: next question
+
+
+# 2023-05-20 11:54:09.679632
+print('hello world')AI: Sure thing! Here's your next question:
+
+Coding Question:
+Write a function that takes in a list of integers and returns the second highest integer. If there is no second highest integer, return -1.
+
+# 2023-05-20 11:55:44.659679
++/q
+
+# 2023-05-20 11:56:02.972541
++I'm ready
+user: I'm ready
+AI: Great! Let's get started. 
+
+Conceptual Question: Can you explain the difference between a stack and a queue data structure? 
+
+Please take your time to provide examples or diagrams if you need to.
+
+# 2023-05-20 11:56:13.516160
++Next question
+user: Next question
+
+
+
+========== Solution Code (2023-05-20 11:56:33.862159) ==========
+
+print('hello world')
+
+========== End of Solution Code ==========
+AI: Sure, here's the next question. 
+
+Programming Question: Write a function that checks if a given string is a palindrome. 
+
+A palindrome is a string that is the same forwards and backwards. For example, "racecar" is a palindrome, but "hello" is not. 
+
+Please provide your implementation of the function in the language of your choice.
+
+# 2023-05-20 11:58:54.923710
++/q
+
+# 2023-05-20 11:59:15.324560
++ I'm ready
+user:  I'm ready
+AI: Great! Let's get started with the first question.
+
+Conceptual Question: What is a hash table and when is it useful?
+
+# 2023-05-20 11:59:24.644100
++next questin
+user: next questin
+AI: Sure! Here's your next question.
+
+Critical Thinking Question: Write a function to determine if a string is a palindrome.
+
+
+
+========== Solution Code ==========
+
+print('hello world')
+
+========== End of Solution Code ==========
+
+# 2023-05-20 12:00:17.252606
++/q
+
+# 2023-05-20 12:07:08.150351
++I'm ready 
+user: I'm ready 
+AI: Great, let's start with the first question. This is a coding-based critical thinking question:
+
+Given a list of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. If the target is not found in the list, return [-1, -1].
+
+Write a Python function `search_range(nums: List[int], target: int) -> List[int]` that returns a list of two integers representing the starting and ending position of the target value in the input list `nums`.
+
+
+========== Solution Code ==========
+
+print('hello world')
+
+========== End of Solution Code ==========
+
+# 2023-05-20 12:09:03.611961
++I'm ready
+user: I'm ready
+AI: Great! Let's begin with our first question:
+
+**Conceptual Question:**
+Can you explain the difference between a stack and a queue? And also, when would you use each of them?
+
+# 2023-05-20 12:09:14.091757
++next question
+user: next question
+AI: Sure. Here's your next question:
+
+**Critical Thinking Question:**
+Given a list of integers, write a function that returns the two numbers that add up to zero or `None` if there are no such numbers. The function should have a time complexity of O(n).
+
+
+========== Solution Code ==========
+
+print('hello world')
+
+========== End of Solution Code ==========
+
+# 2023-05-20 12:13:39.723736
++/q
+
+# 2023-05-20 12:13:50.788826
++I'm ready
+user: I'm ready
+user: I'm ready
+
+# 2023-05-20 12:14:09.821118
++Start
+user: Start
+user: Start
+
+# 2023-05-20 12:14:25.899983
++/q
+
+# 2023-05-20 12:14:36.211995
++I'm ready
+user: I'm ready
+AI: Great! Let's begin with the first question.
+
+Conceptual: Can you explain the difference between a stack and a queue and provide an example scenario where you might use each data structure?
+
+# 2023-05-20 12:14:44.892997
++next question
+user: next question
+AI: Sure thing!
+
+Critical thinking: You're given a string of parentheses, write a function to determine if the string is valid. A valid string has only open and closed parenthesis and the open parenthesis is always closed by a closing parenthesis of the same type. An example of a valid string would be "((()))". Write a function to determine if the input string is valid.
+
+# 2023-05-20 12:16:27.636979
++I'm rady
+user: I'm rady
+
+# 2023-05-20 12:16:59.471003
++I'm ready
+user: I'm ready
+user: I'm ready
+
+# 2023-05-20 12:19:51.508053
++/q
+
+# 2023-05-20 12:20:02.246218
++I'm ready
+user: I'm ready
+
+# 2023-05-20 12:20:39.444092
++/q
+
+# 2023-05-20 12:21:16.611952
++I'm ready
+user: I'm ready
+
+# 2023-05-20 12:23:23.396109
++/q
+
+# 2023-05-20 12:23:33.765245
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+1. (Conceptual) Can you explain the difference between a stack and a queue, and give an example use case for each data structure?
+
+2. (Critical Thinking) Imagine you have a list of integers and you want to remove any duplicates that occur more than twice in the list. How would you accomplish this using Python?
+
+3. (Conceptual) What is the time complexity of a binary search? Could you give an example of when you would want to use a binary search over a linear search?
+
+4. (Critical Thinking) Write a function in Python that takes in two sorted lists of integers, and returns a new list consisting of all the elements that appear in both lists.
+
+5. (Conceptual) Can you explain the difference between a compiler and an interpreter, and give an example of a language that is compiled vs interpreted?
+user: I'm ready
+AI: Great! Let's get started!
+
+Question 1 (Conceptual): What is the difference between a stack and a queue data structure? Can you give an example of a scenario where you would use one over the other?
+
+# 2023-05-20 12:25:22.932020
++idk next question
+user: idk next question
+AI: Sure, no problem. Here's the next question.
+
+Question 2 (Conceptual): What is a hash table? Can you explain how it works and provide an example of when you would use it instead of another data structure?
+user: idk next question
+AI: Alright, let's proceed to the next question.
+
+Question 3 (Critical Thinking): Given an array of integers, write a function to find the two elements that sum up to a given target value. 
+
+For example, given the array `[3, 7, 4, 2, 8]` and the target value `10`, the function should return the indices of the two elements that sum up to `10`, i.e. `[1, 3]`.
+
+# 2023-05-20 12:26:54.933042
++I'm ready
+user: I'm ready
+AI: Great! Let's get started. 
+
+Conceptual Question: Can you explain what a binary tree is and how it differs from a binary search tree?
+
+# 2023-05-20 12:27:08.302191
++Idk Next question
+user: Idk Next question
+AI: Sure! Here's another question:
+
+Critical Thinking Question: Write a function that sorts an array of integers in ascending order using the bubble sort algorithm. Please provide your solution in Python.
+
+
+========== Solution Code ==========
+
+print('hello world')
+
+========== End of Solution Code ==========
+
+# 2023-05-20 12:28:15.683976
++/q
+
+# 2023-05-20 12:29:18.813295
++I'm ready
+user: I'm ready
+AI: Great! Let's get started.
+
+Conceptual Question: What is the difference between a stack and a queue? What are the use cases for each of these data structures?
+
+# 2023-05-20 12:29:27.654088
++next question
+user: next question
+AI: Programming Question:
+
+Write a function in Python that finds the second largest number in a list of integers.
+
+
+========== Solution Code ==========
+
+print('hello world')
+
+========== End of Solution Code ==========
