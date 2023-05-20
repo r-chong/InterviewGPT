@@ -767,3 +767,49 @@ Critical thinking question: Write a function that takes a string of parentheses 
 +D:\pixelboss100\reese_coding\python\InterviewGPT\interviewgpt-cli\testfile.py
 user: D:\pixelboss100\reese_coding\python\InterviewGPT\interviewgpt-cli\testfile.py
 AI: Great job writing this function. Your solution is correct!
+
+# 2023-05-20 14:49:12.854534
++Give me another one
+user: Give me another one
+AI: Conceptual question: Explain the difference between a binary search and a linear search. In what scenarios is one more appropriate than the other?
+
+# 2023-05-20 14:49:20.496160
++I'm not sure
+user: I'm not sure
+AI: No worries, let me give you a brief explanation. 
+
+A linear search iterates over an array of elements and compares each element one by one with the target element. It has a time complexity of O(n). It is more appropriate to use a linear search for small arrays or unsorted arrays.
+
+A binary search works by dividing a sorted array in half and checking whether the middle element is greater or less than the target element. If the middle element is greater than the target, the search is continued in the lower half of the array. If it is smaller than the target, the search is continued in the upper half of the array. A binary search has a time complexity of O(log n). It is more appropriate to use a binary search for large sorted arrays.
+
+# 2023-05-20 14:49:45.270523
++/q
+
+# 2023-05-20 14:50:05.759528
++I'm ready
+user: I'm ready
+AI: Great, let's get started!
+ 
+Conceptual Question: What is the difference between stack and queue? Provide a real-world scenario where you would use a stack and one where you would use a queue.
+
+# 2023-05-20 14:50:50.887542
++A stack is very stacky and a queue is very queuey. It's like in real life, if you stack lots of people on top of each other it is very messy. But if you put them in a line it is not messy
+user: A stack is very stacky and a queue is very queuey. It's like in real life, if you stack lots of people on top of each other it is very messy. But if you put them in a line it is not messy
+AI: Haha, I like your way of describing it. Can you explain the technical difference between them as well? And also provide the real-world scenarios where you would use them?
+
+# 2023-05-20 14:51:16.399084
++No, continue the interview
+user: No, continue the interview
+AI: No problem. Let's move on to the next question then.
+
+Coding Question (Difficulty: Easy): Given a string, write a function to determine if it is a palindrome. A palindrome is a word, phrase, number, or sequence of characters that reads the same backward as forward. For example, 'racecar' is a palindrome.
+
+Please provide your solution in any language of your choice.
+
+# 2023-05-20 14:51:39.118557
++print("hello world")
+user: print("hello world")
+AI: That's just a simple print statement. Could you modify your code to solve the problem described above?
+
+# 2023-05-20 14:51:51.903557
++/q

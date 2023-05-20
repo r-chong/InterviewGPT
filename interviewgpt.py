@@ -98,8 +98,6 @@ def process_solution(file_path):
     # Append the formatted solution to conversation_history.txt
     with open('conversation_history.txt', 'a') as history_file:
         history_file.write(formatted_solution)
-    
-    return solution_code
 
 def load_config(config_file: str) -> dict:
     """
@@ -185,6 +183,7 @@ def start_prompt(session: PromptSession, config: dict) -> None:
 
         # Add the content of the file as a user message
         messages.append({"role": "user", "content": file_content})
+        process_solution(message)
     else:
         # If not a file path, add the message as usual
         messages.append({"role": "user", "content": message})
@@ -249,8 +248,6 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         messages.append(message_response)
         prompt_tokens += usage_response["prompt_tokens"]
         completion_tokens += usage_response["completion_tokens"]
-
-    # ... (rest of the code remains the same)
 
 
 
