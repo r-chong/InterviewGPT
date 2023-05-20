@@ -28,7 +28,7 @@ CONFIG_FILE = Path(WORKDIR, "config.yaml")
 HISTORY_FILE = Path(WORKDIR, ".history")
 BASE_ENDPOINT = "https://api.openai.com/v1"
 ENV_VAR = "OPENAI_API_KEY"
-HISTORY_FILE = Path(WORKDIR, "conversation_history.txt")
+HISTORY_FILE = Path(WORKDIR, "conversation.txt")
 
 # for calculation of how much this costs for api calls
 # we are not using gpt 4
@@ -80,23 +80,15 @@ def should_prompt_for_file(question):
             return True
     return False
 
-def process_solution(file_path):
+def record_history(file_content):
     # Check if the file exists
-    
-    # Read the contents of the file
-    with open(file_path, 'r') as file:
-        solution_code = file.read()
-
-    console.print("received. processing...")
-
-    # Get the current timestamp
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
 
     # Format the file contents
-    formatted_solution = f"\n\n========== Solution Code ==========\n\n{solution_code}\n\n========== End of Solution Code ==========\n"
+    formatted_solution = f"\n\n========== Solution Code ==========\n\n{file_content}\n\n========== End of Solution Code ==========\n"
     
     # Append the formatted solution to conversation_history.txt
-    with open('conversation_history.txt', 'a') as history_file:
+    with open(HISTORY_FILE, 'a') as history_file:
         history_file.write(formatted_solution)
 
 def load_config(config_file: str) -> dict:
@@ -183,7 +175,7 @@ def start_prompt(session: PromptSession, config: dict) -> None:
 
         # Add the content of the file as a user message
         messages.append({"role": "user", "content": file_content})
-        process_solution(message)
+        record_history(file_content)
     else:
         # If not a file path, add the message as usual
         messages.append({"role": "user", "content": message})
@@ -243,6 +235,9 @@ def start_prompt(session: PromptSession, config: dict) -> None:
             console.print("Please write your response in a separate file and attach the path here.")
         else:
             print("You can answer in the chat.")
+
+        # with open(HISTORY_FILE, 'a') as history_file:
+        #     history_file.write(message)
 
         # Update message history and token counters
         messages.append(message_response)
