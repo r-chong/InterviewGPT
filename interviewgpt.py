@@ -88,7 +88,7 @@ def add_markdown_system_message() -> None:
     instruction = "Always use code blocks with the appropriate language tags"
     messages.append({"role": "system", "content": instruction})
 
-
+# for development to see how much api costs
 def calculate_expense(
     prompt_tokens: int,
     completion_tokens: int,
@@ -103,6 +103,7 @@ def calculate_expense(
     )
     return round(expense, 6)
 
+# will be built upon
 def submit_progress():
     # Code to submit progress to the recruiter
     print("Your progress has been submitted to the recruiter.")
