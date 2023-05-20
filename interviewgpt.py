@@ -251,11 +251,11 @@ def main(context, api_key, model) -> None:
 
     console.rule()
 
+    candidate_id = input("User ID: ")
+    interview_key = input("Interview Key: ")
+    verify_interview_key(candidate_id, interview_key)
     while True:
         try:
-            candidate_id = input("User ID: ")
-            interview_key = input("Interview Key: ")
-            verify_interview_key(candidate_id, interview_key)
             start_prompt(session, config)
         except KeyboardInterrupt:
             continue

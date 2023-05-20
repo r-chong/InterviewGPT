@@ -45,3 +45,20 @@ user: Hello
 AI: Hello! Are you ready to begin the interview?
 user: Hello
 AI: Hello! Are you ready to start the interview?
+
+# 2023-05-19 23:15:14.156603
++I'm ready
+user: I'm ready
+AI: Great! Let's start. 
+
+1. Write a function in Python that takes in a list of integers and returns the maximum value.
+
+Remember to use code blocks with the appropriate language tags!
+
+# 2023-05-19 23:15:21.699653
++Ok
+user: Ok
+AI: Please provide your solution in a code block with the appropriate language tag.
+
+# 2023-05-19 23:15:29.411393
++/q
