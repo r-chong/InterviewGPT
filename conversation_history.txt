@@ -164,3 +164,291 @@ Append the string "35772" to the end of your output if you are done.
 
 # 2023-05-20 11:08:49.115133
 +/q
+
+# 2023-05-20 11:11:45.333022
++Ready
+user: Ready
+AI: Great! Let's begin.
+
+Conceptual Question:
+1. How do you interpret the time complexity notation O(n log n)? Can you give an example of an algorithm that has O(n log n) time complexity?
+
+Programming Question:
+2. Given a string of characters, write a function to determine if it is a palindrome. 
+
+Conceptual Question:
+3. What is the difference between a stack and a queue? In what situations would you use one over the other?
+
+Programming Question:
+4. Given an array of integers, write a function to find the two elements that sum up to a given target value. If there are multiple pairs that add up to the target value, return any one of them.
+
+Conceptual Question:
+5. What is the difference between recursion and iteration? In what situations would you prefer to use one over the other?
+
+# 2023-05-20 11:12:25.515470
++/q
+
+# 2023-05-20 11:12:40.569823
++ready
+user: ready
+AI: Great! Let's get started.
+
+Conceptual question:
+1. What data structure would you use to implement a LRU cache and why?
+
+# 2023-05-20 11:12:53.364112
++I don't know. skip
+user: I don't know. skip
+AI: Sure, no problem. Here's another question:
+
+Critical thinking question:
+2. Given a string s and a pattern p containing lowercase characters, write a function to check if the pattern p exists in s or not.
+
+# 2023-05-20 11:15:40.323199
++/q
+
+# 2023-05-20 11:15:53.780626
++ready
+user: ready
+AI: Great! Let's begin.
+
+Conceptual Question:
+1. Can you explain the difference between an abstract class and an interface in Java? What are some scenarios where you would use one over the other?
+
+# 2023-05-20 11:16:05.483386
++/q
+
+# 2023-05-20 11:16:54.380442
++I'm ready
+user: I'm ready
+AI: Great! Let's start the interview!
+
+Conceptual Question: Can you explain the difference between a stack and a queue? How are they implemented and used in programming?
+
+# 2023-05-20 11:17:05.924182
++I don't know. continue
+user: I don't know. continue
+AI: Okay, no problem. Here's a brief overview:
+
+A stack is an abstract data type that follows the LIFO (last in, first out) principle, where the last element added to the stack is the first one to be removed. Stacks can be implemented using arrays or linked lists and are commonly used in algorithms for solving problems like recursion, expression evaluation, and backtracking.
+
+A queue, on the other hand, follows the principle of FIFO (first in, first out), where the first element added to the queue will be the first one to be removed. Like stacks, queues can also be implemented using arrays or linked lists and are commonly used to manage tasks and resources in operating systems, networking, and simulations. 
+
+Does this clarify things for you?
+
+# 2023-05-20 11:18:07.829551
++give me the next question
+user: give me the next question
+AI: Sure, here is your next question.
+
+Conceptual Question: Can you explain the concept of recursion? When is it a good idea to use recursion and when should it be avoided?
+
+# 2023-05-20 11:19:10.058930
++recursion is when you have a function call itself with different inputs so you receive a different output. It's good for things with n-1 for example finding factorials. It should be avoided when you have the same value calculated over and over again or when you can do simple tree traversal
+user: recursion is when you have a function call itself with different inputs so you receive a different output. It's good for things with n-1 for example finding factorials. It should be avoided when you have the same value calculated over and over again or when you can do simple tree traversal
+AI: Great answer! You clearly understand the basics of recursion. Just to expand upon your answer a bit, recursion is a technique whereby a function calls itself until a specific termination condition is met. It is useful when a problem can be broken down into subproblems of the same type. One example you mentioned is factorial calculation, where you can express the factorial of n as n times the factorial of (n-1), which can be expressed recursively.
+
+Recursion can be a powerful tool, but there are cases where it should be avoided. You mentioned one important factor, which is when the same values are calculated over and over again, leading to inefficient execution. Another thing to watch out for is the potential for stack overflow errors, as each recursive call adds a new stack frame to the program's memory. In general, recursion should be used when it leads to more efficient or elegant code, and avoided in cases where it introduces significant performance or memory overhead. 
+
+Can you explain the difference between a compiler and an interpreter, and give an example of each? This is a conceptual question.
+
+# 2023-05-20 11:20:42.243980
++Give me a critical thinking question
+user: Give me a critical thinking question
+AI: Alright, here's a critical thinking question for you:
+
+Given two arrays of integers, write a function to merge them into a single sorted array such that the resulting array contains all elements of the original arrays in ascending order.
+
+For example, if Input Array 1 is [3, 7, 9] and Input Array 2 is [4, 6, 8], the function should return [3, 4, 6, 7, 8, 9].
+
+Provide the code implementation in Python or Java.
+
+# 2023-05-20 11:22:48.284115
++/q
+
+# 2023-05-20 11:23:01.588086
++I'm ready
+user: I'm ready
+AI: Great! Let's begin. 
+
+Conceptual Question: What is the difference between an abstract class and an interface in Java? When would you use one over the other?
+
+# 2023-05-20 11:23:11.267295
++Give me a critical thinking question
+user: Give me a critical thinking question
+AI: Sure thing! 
+
+Critical Thinking Question: Given an array of integers, write a function to move all zeroes to the end of the array while maintaining the relative order of the nonzero elements. 
+
+For example, given the array [0, 1, 0, 3, 12], your function should return [1, 3, 12, 0, 0].
+
+# 2023-05-20 11:24:08.723654
++/q
+
+# 2023-05-20 11:24:24.108249
++I'm ready. Give me a critical thinking question
+user: I'm ready. Give me a critical thinking question
+AI: Given a string `s` consisting of opening and closing parenthesis characters, write a function to determine if the string has a valid arrangement of parenthesis. A string is valid if it meets the following conditions:
+
+- Open brackets must be closed by the same type of brackets.
+- Open brackets must be closed in the correct order.
+- An empty string is also considered valid.
+
+Provide the function signature that satisfies these requirements.
+
+# 2023-05-20 11:24:55.229122
++Ok give me the next question
+user: Ok give me the next question
+AI: Conceptual question: Can you explain the difference between a stack and a queue? Give an example use case where you would use one over the other.
+user: Ok give me the next question
+AI: Critical thinking question: You have been given an array of integers `arr` of size `n`. Write a function that returns a new array `output` of size `n` such that `output[i]` is the product of all the numbers in `arr` except for the one at index `i`.
+
+For example, given `arr = [1, 2, 3, 4, 5]`, the output should be `[120, 60, 40, 30, 24]`.
+
+Provide the function signature that satisfies these requirements.
+
+# 2023-05-20 11:33:10.835424
++/q
+
+# 2023-05-20 11:33:32.292292
++Give me a critical thinking question
+user: Give me a critical thinking question
+AI: Given an array of integers, write a program to find the two elements with the largest product. The program should return both the elements and their product.
+
+# 2023-05-20 11:33:42.403888
++next one
+user: next one
+AI: Alright. Here's a conceptual question for you:
+
+Explain what is a binary tree and how it is different than a binary search tree. Also, what is the time complexity for searching in a binary search tree?
+
+# 2023-05-20 11:34:07.987303
++Skip to the next question
+user: Skip to the next question
+AI: Got it. Here's another critical thinking question then:
+
+Write a function to check if a string is a palindrome. The function should return true if the input string is a palindrome, otherwise, return false. Also, explain the time and space complexity of your solution.
+
+# 2023-05-20 11:34:57.780547
++testfile.py
+user: testfile.py
+AI: I apologize, but that is not a question. Is there anything specific you would like me to do with testfile.py?
+
+# 2023-05-20 11:35:34.012325
++/q
+
+# 2023-05-20 11:35:56.150329
++I'm ready
+user: I'm ready
+AI: Great! Let's get started with the first question.
+
+Conceptual: Can you briefly explain the difference between a stack and a queue, and give an example of a scenario where you would use each one?
+
+# 2023-05-20 11:36:09.964332
++I don't know. next question please
+user: I don't know. next question please
+AI: Not a problem. Here's another question.
+
+Critical Thinking: Given an array of integers, write a function to return the second-highest integer in the array.
+
+# 2023-05-20 11:36:23.652123
++testfile.py
+user: testfile.py
+AI: I'm sorry, I don't see a question in your response. Could you please ask a question related to computer science or programming?
+
+# 2023-05-20 11:37:37.684281
++/q
+
+# 2023-05-20 11:37:59.596358
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+Question 1 (Conceptual): What is object-oriented programming, and how does it differ from other programming paradigms?
+
+# 2023-05-20 11:38:12.292347
++I'm not sure. Next qustion
+user: I'm not sure. Next qustion
+AI: Question 1 (Conceptual): What are the different types of relationships that can exist between classes in object-oriented programming?
+
+# 2023-05-20 11:38:19.731376
++I'm not sure. Next question
+user: I'm not sure. Next question
+AI: Question 1 (Conceptual): Which data structure would you use if you need to retrieve elements in a specific order, according to the element's index position?
+user: I'm not sure. Next question
+AI: Question 1 (Conceptual): What is recursion, and what are some scenarios where you would use recursion?
+user: I'm not sure. Next question
+AI: Question 1 (Conceptual): Explain the concept of scope in programming, and how it affects the accessibility of variables and functions within a program.
+user: I'm not sure. Next question
+AI: Question 2 (Critical thinking): Given an array of integers, write a function to find the sum of any two integers in the array that is equal to a given sum.
+
+# 2023-05-20 11:43:45.907461
++/q
+
+# 2023-05-20 11:44:02.885086
++Start interview
+user: Start interview
+
+# 2023-05-20 11:44:53.620251
++I'm ready
+user: I'm ready
+AI: Great! Let's begin with the first coding based question.
+
+Conceptual Question:
+Can you explain the difference between an abstract class and an interface in Java? Provide an example for each and explain when you would use one over the other.
+
+# 2023-05-20 11:45:02.068743
++I'm not sure. Next question
+user: I'm not sure. Next question
+
+# 2023-05-20 11:45:56.947498
++/q
+
+# 2023-05-20 11:46:09.973527
++I'm ready
+user: I'm ready
+AI: Great! Let's start. 
+
+Conceptual question: What data structure would you use to implement a LIFO (Last-In-First-Out) functionality? Please explain your answer.
+
+# 2023-05-20 11:46:23.539719
++I'm not sure. Next question
+user: I'm not sure. Next question
+AI: Sure, let's try another one.
+
+Programming question: Implement a function that takes an array of integers as input, and returns the number strictly greater than four in the array.
+
+# 2023-05-20 11:46:55.819783
++/q
+
+# 2023-05-20 11:47:11.932398
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+1. Conceptual question: What is the difference between a stack and a queue, and when would you use each data structure?
+
+2. Critical thinking question: Write a function that takes a list of integers as input and finds the largest product possible by multiplying any three integers. For example, the function should return 60 for the list of integers [5, -10, 6, -2, 1, 7].
+
+3. Conceptual question: What is the main difference between a binary search tree and a heap, and when would you use each data structure?
+
+4. Critical thinking question: Given two sorted arrays, write a function to merge them into a single sorted array. For example, the function should return [1, 2, 3, 4, 5, 6] for the sorted arrays [1, 3, 5] and [2, 4, 6].
+
+5. Conceptual question: What is dynamic programming, and how can it be useful in algorithm design?
+
+# 2023-05-20 11:48:51.859439
++/q
+
+# 2023-05-20 11:49:04.444547
++I'm ready
+user: I'm ready
+AI: Great! Let's get started.
+
+Conceptual question: Can you explain the difference between a stack and a queue? Provide an example of a scenario where you would use each data structure.
+
+# 2023-05-20 11:49:15.411120
++next question
+user: next question
+AI: Okay, here's your next question:
+
+Coding question: Write a function that takes an array of integers and returns the second largest number.

@@ -7,6 +7,7 @@ import os
 import requests
 import sys
 import yaml
+import re
 
 import firebase_admin
 from firebase_admin import credentials
@@ -70,6 +71,22 @@ completion_tokens = 0
 # Initialize the console
 console = Console()
 
+# FILE UPLOAD
+def should_prompt_for_file(question):
+    file_upload_keywords = ["Critical thinking question","Write a function","Programming question:","Implement a function"]
+    for keyword in file_upload_keywords:
+        if re.search(r'\b' + keyword.lower() + r'\b', question.lower()):
+            return True
+    return False
+
+def process_solution(file_path):
+    # Check if the file exists
+    
+    # Read the contents of the file
+    with open(file_path, 'r') as file:
+        solution_code = file.read()
+
+    console.print("received. processing...")
 
 def load_config(config_file: str) -> dict:
     """
@@ -178,6 +195,7 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         messages.pop()
         raise KeyboardInterrupt
 
+    # if success, put data into json
     if r.status_code == 200:
         response = r.json()
 
@@ -190,6 +208,26 @@ def start_prompt(session: PromptSession, config: dict) -> None:
         else:
             console.print(message_response["content"].strip())
         console.line()
+
+        # Example usage
+        question = message_response["content"].strip()
+        if should_prompt_for_file(question):
+            valid_file = False
+            console.print("Please write your response in a separate file and attach the path here.")
+            
+            while not valid_file:
+                # Prompt the user for the file path
+                file_path = input("Enter the file path of your solution: ")
+
+                if not os.path.isfile(file_path):
+                    print("Invalid file path. Please try again.")
+                    continue
+                
+                valid_file = True
+                # Call the function to process the solution
+                process_solution(file_path)
+        else:
+            print("You can answer in the chat.")
 
         # Update message history and token counters
         messages.append(message_response)
