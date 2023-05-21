@@ -1,4 +1,4 @@
-api-key: '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'
+api-key: 'API_KEY_HERE'
 model: 'gpt-3.5-turbo'
 temperature: 1
 #max_tokens: 500
