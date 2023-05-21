@@ -1,6 +1,7 @@
 # InterviewGPT
 
 AI leetcode interviewer that assesses tech applicants. Built on Langchain and OpenAI APIs. Recruiter-focused and tracks progress and submits analysis to email.
+
 ![lnterviewGPT-1](https://github.com/r-chong/InterviewGPT/assets/75395781/74be3683-c9c6-404e-b9e1-a40c20d014df)
 
 # Final features:
@@ -33,3 +34,24 @@ AI leetcode interviewer that assesses tech applicants. Built on Langchain and Op
 **Prompting**
 
 -   cut down Ack's original prompt to save tokens- AI interviewer: provides focused and structured interviews, asking one question at a time and ensuring comprehension by asking follow-up questions before moving to the next question
+
+---
+
+# How to set up CLI
+
+You need Python and Git installed on your system.
+
+1. Clone the repository:
+
+`git clone https://github.com/r-chong/InterviewGPT.git`
+`cd interviewgpt-cli`
+
+2. Install the dependencies:
+`pip install -r requirements.txt`
+
+3. Setup your OpenAI api key and Google cloud api key
+- Follow instructions
+
+3. Configure your API keys. 
+- Edit the openai_api-key parameter in the config.yaml file
+- Edit the Google Cloud API key
