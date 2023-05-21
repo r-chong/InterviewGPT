@@ -1,52 +1,41 @@
 
-# 2023-05-20 22:26:48.967052
+# 2023-05-20 22:57:45.167414
 +I'm ready
 user: I'm ready
-AI: Great! Let's begin. 
-
-1. Conceptual Question: Can you explain the difference between a stack and a queue and where you would use each data structure?
-
-# 2023-05-20 22:26:54.733981
-+/q
-
-# 2023-05-20 22:31:24.743249
-+I'm ready
-user: I'm ready
-
-# 2023-05-20 22:31:58.479131
-+c
-+
-user: c
-
-
-# 2023-05-20 22:32:32.615311
-+I'm ready
-user: I'm ready
-AI: Great! Let's get started.
-
-Conceptual question:
-1. What is the difference between a stack and a queue? Provide a real-life example of where you would use each data structure.
-
-# 2023-05-20 22:32:38.574491
-+/q
-
-# 2023-05-20 22:45:57.288580
-+I'm ready
-user: I'm ready
-AI: Great! Let's begin with the first question.
+AI: Great to hear that! Let's get started. 
 
 Conceptual Question:
-What is the difference between a stack and a queue? And when would you use one over the other?
+1. What is the difference between a stack and a queue, and how are they typically used in computer science?
 
-# 2023-05-20 22:46:04.617040
+Programming Question:
+2. Write a Python function that takes in an integer n and returns the nth Fibonacci number. 
+
+Conceptual Question:
+3. What is object-oriented programming, and how does it differ from procedural programming?
+
+Programming Question:
+4. Write a Python function that takes in a list of integers and returns the median of the list.
+
+Conceptual Question:
+5. What is the difference between a binary search tree and a binary heap, and how are they used in computer science?
+
+# 2023-05-20 22:57:58.825435
 +/q
 
-# 2023-05-20 22:47:48.984398
+# 2023-05-20 22:59:02.631000
 +I'm ready
 user: I'm ready
 AI: Great! Let's get started.
 
-Conceptual Question 1/5: Can you explain the difference between a stack and a queue data structure? When would you utilize one over the other?
+1. Conceptual: Explain the difference between a stack and a queue. In what situations would you use one over the other?
 
-# 2023-05-20 22:47:54.607953
+2. Critical Thinking: Write a function that takes in a string and returns the most common character(s) in the string. If there are multiple characters that occur equally as the most frequent, return all of them.
+
+3. Conceptual: What is the difference between an abstract class and an interface in Java?
+
+4. Critical Thinking: Given an array of integers, write a function to find the maximum sum of any contiguous subarray of the array.
+
+5. Conceptual: Explain the difference between a recursive function and an iterative function. In what situations would you use one over the other?
+
+# 2023-05-20 22:59:18.398458
 +/q

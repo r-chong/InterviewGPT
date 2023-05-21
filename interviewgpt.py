@@ -118,7 +118,10 @@ def send_email(candidate_id, interviewer_email):
 
     PROMPT = PromptTemplate(template=prompt_template, input_variables=["text"])
     formatted_prompt = PROMPT.format(text=content)
-    summary = llm.generate([formatted_prompt])
+    llm_result = llm.generate([formatted_prompt])
+
+    generations = llm_result.generations
+    summary = generations[0][0]
 
     # Send summary via email
     RECRUITER_EMAIL = interviewer_email
