@@ -62,5 +62,6 @@ You need Python and Git installed on your system.
 
 4. Setup FireStore database like this
 ![image](https://github.com/r-chong/InterviewGPT/assets/75395781/0e43f49f-1c71-419a-a71e-25e9a0fe34a6)
+Download and reference serviceAccountKey.json
 
 5. Run `python interviewgpt.py --context context.txt`
