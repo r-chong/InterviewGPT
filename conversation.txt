@@ -1,135 +1,85 @@
 
-# 2023-05-20 23:14:35.480249
-+I'm ready
-user: I'm ready
-AI: Great! Let's get started with the first question:
-
-Conceptual: What is the difference between a stack and a queue? Can you provide an example where you would use each one?
-
-# 2023-05-20 23:14:55.622716
-+/q
-
-# 2023-05-20 23:25:11.703928
-+I'm ready
-user: I'm ready
-AI: Great! Let's begin. 
+# 2023-05-20 23:59:18.992574
++I'mr eady
+user: I'mr eady
+AI: Great! Let's get started with the first question.
 
 Conceptual Question:
-1. How would you explain the concept of recursion to someone who has no prior programming experience?
 
-Please take your time in explaining the concept to me.
+1. What is object-oriented programming? How is it different from procedural programming?
 
-# 2023-05-20 23:25:16.774889
+Please explain in your own words.
+
+# 2023-05-21 00:00:47.168187
++Object oriented programming is based on classes and structures. It focuses on data and attributes. Procedural focuses on function that operate on data.
+user: Object oriented programming is based on classes and structures. It focuses on data and attributes. Procedural focuses on function that operate on data.
+AI: Great! That's correct. 
+
+Next question:
+
+Critical Thinking Question:
+
+2. Write a function that takes in an array of integers and returns the second smallest integer in the array. Please write your solution in Python. 
+
+Remember to include sufficient comments in your code.
+
+# 2023-05-21 00:01:39.247616
++D:\pixelboss100\reese_coding\python\InterviewGPT\interviewgpt-cli\testfile.py
+
+
+========== Solution Code ==========
+
+def find_second_smallest(arr):
+    if len(arr) < 2:
+        return None
+    
+    smallest = float('inf')  # Initialize smallest to positive infinity
+    second_smallest = float('inf')  # Initialize second_smallest to positive infinity
+    
+    for num in arr:
+        if num < smallest:
+            second_smallest = smallest
+            smallest = num
+        elif num < second_smallest and num != smallest:
+            second_smallest = num
+    
+    if second_smallest == float('inf'):
+        return None  # No second smallest element found
+    
+    return second_smalles
+
+
+========== End of Solution Code ==========
+user: D:\pixelboss100\reese_coding\python\InterviewGPT\interviewgpt-cli\testfile.py
+AI: Great job! Your code looks efficient and handles the edge case where the input array has a length of less than 2. 
+
+Next Question: 
+
+Conceptual Question:
+
+3. What is the difference between recursion and iteration? 
+
+Please explain in your own words.
+
+# 2023-05-21 00:01:58.975496
 +/q
 
-# 2023-05-20 23:26:20.386031
+# 2023-05-21 00:05:33.568677
 +I'm ready
 user: I'm ready
-AI: Great! Let's get started!
+AI: Great, let's begin! 
 
-Question 1 (conceptual): What is the difference between a stack and a queue? Give an example of when you would use each.
+Conceptual question: Can you explain the difference between a stack and a queue in data structures?
 
-# 2023-05-20 23:26:33.944038
+# 2023-05-21 00:05:38.951677
 +/q
 
-# 2023-05-20 23:27:15.808534
-+I'm ready
-user: I'm ready
-AI: Great! Let's begin.
-
-Conceptual Question: What is the difference between a process and a thread in an operating system and when would you choose to use one over the other?
-
-# 2023-05-20 23:27:25.199799
-+/q
-
-# 2023-05-20 23:29:12.401084
-+I'm ready
-user: I'm ready
-AI: Great! Let's start the interview. 
-
-Conceptual question: Can you explain the difference between a stack and a queue data structure, and when you would choose to use one over the other?
-
-# 2023-05-20 23:29:17.430655
-+/q
-
-# 2023-05-20 23:30:24.367971
+# 2023-05-21 00:06:21.400670
 +I'm ready
 user: I'm ready
 AI: Great! Let's get started.
 
-Conceptual: Explain the difference between a stack and a queue. When would you use each data structure?
+Conceptual question: Can you explain what a hash table is and how it works?
 
-Note: This is an open-ended question, so there is no specific right or wrong answer. I'm looking for a good understanding of the concepts and the ability to differentiate between the two data structures.
-
-# 2023-05-20 23:30:33.712103
-+/q
-
-# 2023-05-20 23:32:40.592134
-+I'm ready
-user: I'm ready
-AI: Great! Let's begin. 
-
-### Question 1 (CS Conceptual): 
-What is the difference between a stack and a queue, and when would you use one over the other?
-
-# 2023-05-20 23:32:47.567141
-+/q
-
-# 2023-05-20 23:33:50.632032
-+I'm ready
-user: I'm ready
-AI: Great! Let's begin.
-
-Conceptual question: Can you explain what recursion is and give an example of a problem that can be solved with it?
-
-# 2023-05-20 23:33:56.999157
-+/1
-user: /1
-AI: Coding-based question: Given two strings, write a function to check if they are one edit (or zero edits) away. An edit can be a single character insert, delete, or replace. What is the time complexity of your implementation?
-
-# 2023-05-20 23:34:02.415111
-+/q
-
-# 2023-05-20 23:35:23.105286
-+I'm rady
-user: I'm rady
-AI: Great! Let's get started!
-
-Question 1 (Conceptual):
-What is the difference between a stack and a queue? Can you give an example of a scenario where you would use each of them?
-
-# 2023-05-20 23:35:29.718795
-+/q
-
-# 2023-05-20 23:36:44.656075
-+I'm ready
-user: I'm ready
-AI: Great! Let's start with the first question.
-
-Conceptual Question:
-1. What is the difference between procedural and object-oriented programming? Can you give me an example of a language that supports both paradigms?
-
-# 2023-05-20 23:36:50.495082
-+/q
-
-# 2023-05-20 23:37:37.296535
-+I'm ready
-user: I'm ready
-AI: Great! Let's begin with the first question.
-
-Conceptual Question:
-What is the difference between a stack and a queue? Please explain their operations and provide an example of one practical implementation for each of them.
-
-# 2023-05-20 23:37:50.495609
-+/q
-
-# 2023-05-20 23:39:17.632709
-+I'm ready
-user: I'm ready
-AI: Great! Let's start with the first question.
-
-Conceptual Question:
-Can you explain the difference between a stack and a queue? And in which circumstances would you choose one over the other?
-
-# 2023-05-20 23:39:24.655390
+# 2023-05-21 00:06:30.127677
 +/q

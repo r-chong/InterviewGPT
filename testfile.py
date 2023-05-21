@@ -1,18 +1,18 @@
-def move_zeros(arr):
-    # Initialize a new array to store the non-zero elements
-    non_zeros = []
+def find_second_smallest(arr):
+    if len(arr) < 2:
+        return None
     
-    # Count the number of zeros encountered
-    zero_count = 0
+    smallest = float('inf')  # Initialize smallest to positive infinity
+    second_smallest = float('inf')  # Initialize second_smallest to positive infinity
     
-    # Iterate through the array
     for num in arr:
-        if num != 0:
-            non_zeros.append(num)  # Append non-zero elements to the new array
-        else:
-            zero_count += 1  # Count the zeros
+        if num < smallest:
+            second_smallest = smallest
+            smallest = num
+        elif num < second_smallest and num != smallest:
+            second_smallest = num
     
-    # Append the zeros to the new array
-    non_zeros.extend([0] * zero_count)
+    if second_smallest == float('inf'):
+        return None  # No second smallest element found
     
-    return non_zeros
+    return second_smalles

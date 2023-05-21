@@ -29,6 +29,7 @@ from rich.markdown import Markdown
 import smtplib
 from langchain.llms import OpenAI
 from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from langchain.prompts import PromptTemplate
 
 WORKDIR = Path(__file__).parent
@@ -132,21 +133,67 @@ def send_email(candidate_id, interviewer_email):
     FROM_EMAIL = "reesec3d@gmail.com"
     FROM_PASSWORD = "kpdamhysebzjekyi"
 
-    # console.print("summary" + str(summary))
-    # console.print("content" + str(content))
-    console.print("time" + time_elapsed)
-    formatted_email = "Summary of candidate performance: \n\n" + str(summary) + "\n\nFull interview transcript: \n\n" + str(content) + "Time elapsed: " + str(time_elapsed) + "\n\nThis email was sent automatically by the LangChain Interview GPT. Please do not reply to this email."
+    # Create a message
+    msg = MIMEMultipart()
 
-    msg = MIMEText(str(formatted_email))
-    msg["Subject"] = "Summary of Interview with " + "John Doe" #candidate_id
-    msg["From"] = FROM_EMAIL
-    msg["To"] = RECRUITER_EMAIL
+    # setup the parameters of the message
+    msg['From']=FROM_EMAIL
+    msg['To']=RECRUITER_EMAIL
+    msg['Subject']="Summary of Interview with " + "John Doe"  #candidate_id
 
-    # Set up the email server and send the email
-    server = smtplib.SMTP("smtp.gmail.com", 587)  # Provide your SMTP server and port
+    # add in the message body
+    message = """\
+        <html>
+            <head>
+            <style>
+                body {{
+                    font-family: 'Arial', sans-serif;
+                    color: #333;
+                    max-width: 800px;
+                    margin: auto;
+                }}
+                h2 {{
+                    font-family: 'Roboto', sans-serif;
+                    color: #2d3748;
+                }}
+                p {{
+                    font-size: 14px;
+                    line-height: 1.5;
+                }}
+                strong {{
+                    color: #2d3748;
+                }}
+                em {{
+                    color: #718096;
+                }}
+                </style>
+                </head>
+            <body>
+                <h1>Interview Summary</h1>
+                <p>Candidate name: John Doe</p>
+            
+                <h2>Summary of candidate performance:</h2>
+                <pre>{summary}</pre>
+                <h2>Full interview transcript:</h2>
+                <pre>{content}</pre>
+                <p><strong>Time elapsed: {time_elapsed}</strong></p>
+                <p><em>This email was sent automatically by InterviewGPT. Please do not reply to this email.</em></p>
+            </body>
+        </html>
+        """.format(summary=summary.text, content=content, time_elapsed=str(time_elapsed))
+
+    msg.attach(MIMEText(message, 'html'))
+
+    # Setup the server
+    server = smtplib.SMTP('smtp.gmail.com: 587')
     server.starttls()
-    server.login(FROM_EMAIL, FROM_PASSWORD)
-    server.sendmail(FROM_EMAIL, RECRUITER_EMAIL, msg.as_string())
+
+    # Login to the server
+    server.login(msg['From'], FROM_PASSWORD)
+
+    # send the message via the server.
+    server.sendmail(msg['From'], msg['To'], msg.as_string())
+
     server.quit()
 
 def load_config(config_file: str) -> dict:
