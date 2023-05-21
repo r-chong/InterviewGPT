@@ -10,6 +10,7 @@ import yaml
 import re
 import datetime
 
+# firestore
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -27,7 +28,7 @@ from rich.markdown import Markdown
 import smtplib
 from langchain.llms import OpenAI
 from email.mime.text import MIMEText
-from langchain.chains.summarize import load_summarize_chain
+from langchain.prompts import PromptTemplate
 
 WORKDIR = Path(__file__).parent
 CONFIG_FILE = Path(WORKDIR, "config.yaml")
@@ -104,17 +105,27 @@ def send_email(candidate_id, interviewer_email):
 
     # Load the summarization chain
     llm = OpenAI(temperature=0)
-    chain = load_summarize_chain(llm, chain_type="map_reduce")
 
-    # Summarize the content
-    summary = chain.run(content)
+    from langchain.prompts import PromptTemplate
+
+    prompt_template = """Summarize this interview, highlight the best responses from the candidate, rank them numerically, and provide a hiring recommendation:
+
+    Interview:
+    {text}
+
+    Summary and Highlights:
+    """
+
+    PROMPT = PromptTemplate(template=prompt_template, input_variables=["text"])
+    formatted_prompt = PROMPT.format(text=content)
+    summary = llm.generate([formatted_prompt])
 
     # Send summary via email
     RECRUITER_EMAIL = interviewer_email
-    FROM_EMAIL = "dev.reese.chong@gmail.com"
-    FROM_PASSWORD = "BJEPugrW912"
+    FROM_EMAIL = "reesec3d@gmail.com"
+    FROM_PASSWORD = "kpdamhysebzjekyi"
 
-    msg = MIMEText(summary)
+    msg = MIMEText(str(summary))
     msg["Subject"] = "Summary of Interview with " + candidate_id
     msg["From"] = FROM_EMAIL
     msg["To"] = RECRUITER_EMAIL
@@ -167,7 +178,7 @@ def calculate_expense(
 # will be built upon
 def submit_progress():
     # Code to submit progress to the recruiter
-    send_email("yye893rRESguKGH4MLge","reesec3d@gmail.com")
+    send_email("yye893rRESguKGH4MLge","dev.reese.chong@gmail.com")
     print("Your progress has been submitted to the recruiter.")
 
 
