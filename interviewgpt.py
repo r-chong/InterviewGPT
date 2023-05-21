@@ -23,6 +23,12 @@ from prompt_toolkit.history import FileHistory
 from rich.console import Console
 from rich.markdown import Markdown
 
+# email stuff
+import smtplib
+from langchain.llms import OpenAI
+from email.mime.text import MIMEText
+from langchain.chains.summarize import load_summarize_chain
+
 WORKDIR = Path(__file__).parent
 CONFIG_FILE = Path(WORKDIR, "config.yaml")
 HISTORY_FILE = Path(WORKDIR, ".history")
@@ -91,12 +97,47 @@ def record_history(file_content):
     with open(HISTORY_FILE, 'a') as history_file:
         history_file.write(formatted_solution)
 
+def send_email(candidate_id, interviewer_email):
+    # Read the content of the file
+    with open(HISTORY_FILE, "r") as file:
+        content = file.read()
+
+    # Load the summarization chain
+    llm = OpenAI(temperature=0)
+    chain = load_summarize_chain(llm, chain_type="map_reduce")
+
+    # Summarize the content
+    summary = chain.run(content)
+
+    # Send summary via email
+    RECRUITER_EMAIL = interviewer_email
+    FROM_EMAIL = "dev.reese.chong@gmail.com"
+    FROM_PASSWORD = "BJEPugrW912"
+
+    msg = MIMEText(summary)
+    msg["Subject"] = "Summary of Interview with " + candidate_id
+    msg["From"] = FROM_EMAIL
+    msg["To"] = RECRUITER_EMAIL
+
+    # Set up the email server and send the email
+    server = smtplib.SMTP("smtp.gmail.com", 587)  # Provide your SMTP server and port
+    server.starttls()
+    server.login(FROM_EMAIL, FROM_PASSWORD)
+    server.sendmail(FROM_EMAIL, RECRUITER_EMAIL, msg.as_string())
+    server.quit()
+
 def load_config(config_file: str) -> dict:
     """
     Read a YAML config file and returns it's content as a dictionary
     """
     with open(config_file) as file:
         config = yaml.load(file, Loader=yaml.FullLoader)
+
+    # Extract the API key from the config
+    api_key = config['api-key']
+
+    # Set the OPENAI_API_KEY environment variable
+    os.environ['OPENAI_API_KEY'] = api_key
 
     return config
 
@@ -126,6 +167,7 @@ def calculate_expense(
 # will be built upon
 def submit_progress():
     # Code to submit progress to the recruiter
+    send_email("yye893rRESguKGH4MLge","reesec3d@gmail.com")
     print("Your progress has been submitted to the recruiter.")
 
 
@@ -313,7 +355,7 @@ def main(context, api_key, model) -> None:
             continue
         except EOFError:
             break
-
+    
 
 if __name__ == "__main__":
     main()
