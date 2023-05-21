@@ -43,15 +43,24 @@ You need Python and Git installed on your system.
 
 1. Clone the repository:
 
-`git clone https://github.com/r-chong/InterviewGPT.git`
-`cd interviewgpt-cli`
+- `git clone https://github.com/r-chong/InterviewGPT.git`
+- `cd interviewgpt-cli`
 
 2. Install the dependencies:
 `pip install -r requirements.txt`
 
 3. Setup your OpenAI api key and Google cloud api key
-- Follow instructions
 
-3. Configure your API keys. 
-- Edit the openai_api-key parameter in the config.yaml file
-- Edit the Google Cloud API key
+    Openai: 
+    - Sign up for a developer account on OpenAI, they have $19 free credit you can use.
+    - Go to API keys and generate new
+    - Copy and paste into `openai_api-key` in `config.yaml`
+    
+    Google cloud api key: Turn on 2FA on your google account, go to account/security/2fa/app passwords. 
+    - Generate a new key for Gmail on your chosen device
+    - Copy and paste into `google_cloud_pass` in `config.yaml`
+
+4. Setup FireStore database like this
+![image](https://github.com/r-chong/InterviewGPT/assets/75395781/0e43f49f-1c71-419a-a71e-25e9a0fe34a6)
+
+5. Run `python interviewgpt.py --context context.txt`
