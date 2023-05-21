@@ -9,6 +9,7 @@ import sys
 import yaml
 import re
 import datetime
+import time
 
 # firestore
 import firebase_admin
@@ -89,7 +90,7 @@ def should_prompt_for_file(question):
 
 def record_history(file_content):
     # Check if the file exists
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     # Format the file contents
     formatted_solution = f"\n\n========== Solution Code ==========\n\n{file_content}\n\n========== End of Solution Code ==========\n"
@@ -99,6 +100,9 @@ def record_history(file_content):
         history_file.write(formatted_solution)
 
 def send_email(candidate_id, interviewer_email):
+    time_elapsed = time_of_end - time_of_start
+    time_elapsed = format(time_elapsed, ".2f")
+
     # Read the content of the file
     with open(HISTORY_FILE, "r") as file:
         content = file.read()
@@ -128,8 +132,13 @@ def send_email(candidate_id, interviewer_email):
     FROM_EMAIL = "reesec3d@gmail.com"
     FROM_PASSWORD = "kpdamhysebzjekyi"
 
-    msg = MIMEText(str(summary))
-    msg["Subject"] = "Summary of Interview with " + candidate_id
+    # console.print("summary" + str(summary))
+    # console.print("content" + str(content))
+    console.print("time" + time_elapsed)
+    formatted_email = "Summary of candidate performance: \n\n" + str(summary) + "\n\nFull interview transcript: \n\n" + str(content) + "Time elapsed: " + str(time_elapsed) + "\n\nThis email was sent automatically by the LangChain Interview GPT. Please do not reply to this email."
+
+    msg = MIMEText(str(formatted_email))
+    msg["Subject"] = "Summary of Interview with " + "John Doe" #candidate_id
     msg["From"] = FROM_EMAIL
     msg["To"] = RECRUITER_EMAIL
 
@@ -180,6 +189,8 @@ def calculate_expense(
 
 # will be built upon
 def submit_progress():
+    global time_of_end
+    time_of_end = time.time()
     # Code to submit progress to the recruiter
     send_email("yye893rRESguKGH4MLge","dev.reese.chong@gmail.com")
     print("Your progress has been submitted to the recruiter.")
@@ -362,6 +373,8 @@ def main(context, api_key, model) -> None:
     candidate_id = input("User ID: ")
     interview_key = input("Interview Key: ")
     verify_interview_key(candidate_id, interview_key)
+    global time_of_start
+    time_of_start = time.time()
     while True:
         try:
             start_prompt(session, config)

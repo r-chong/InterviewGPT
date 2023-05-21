@@ -1,41 +1,135 @@
 
-# 2023-05-20 22:57:45.167414
+# 2023-05-20 23:14:35.480249
 +I'm ready
 user: I'm ready
-AI: Great to hear that! Let's get started. 
+AI: Great! Let's get started with the first question:
 
-Conceptual Question:
-1. What is the difference between a stack and a queue, and how are they typically used in computer science?
+Conceptual: What is the difference between a stack and a queue? Can you provide an example where you would use each one?
 
-Programming Question:
-2. Write a Python function that takes in an integer n and returns the nth Fibonacci number. 
-
-Conceptual Question:
-3. What is object-oriented programming, and how does it differ from procedural programming?
-
-Programming Question:
-4. Write a Python function that takes in a list of integers and returns the median of the list.
-
-Conceptual Question:
-5. What is the difference between a binary search tree and a binary heap, and how are they used in computer science?
-
-# 2023-05-20 22:57:58.825435
+# 2023-05-20 23:14:55.622716
 +/q
 
-# 2023-05-20 22:59:02.631000
+# 2023-05-20 23:25:11.703928
++I'm ready
+user: I'm ready
+AI: Great! Let's begin. 
+
+Conceptual Question:
+1. How would you explain the concept of recursion to someone who has no prior programming experience?
+
+Please take your time in explaining the concept to me.
+
+# 2023-05-20 23:25:16.774889
++/q
+
+# 2023-05-20 23:26:20.386031
++I'm ready
+user: I'm ready
+AI: Great! Let's get started!
+
+Question 1 (conceptual): What is the difference between a stack and a queue? Give an example of when you would use each.
+
+# 2023-05-20 23:26:33.944038
++/q
+
+# 2023-05-20 23:27:15.808534
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+Conceptual Question: What is the difference between a process and a thread in an operating system and when would you choose to use one over the other?
+
+# 2023-05-20 23:27:25.199799
++/q
+
+# 2023-05-20 23:29:12.401084
++I'm ready
+user: I'm ready
+AI: Great! Let's start the interview. 
+
+Conceptual question: Can you explain the difference between a stack and a queue data structure, and when you would choose to use one over the other?
+
+# 2023-05-20 23:29:17.430655
++/q
+
+# 2023-05-20 23:30:24.367971
 +I'm ready
 user: I'm ready
 AI: Great! Let's get started.
 
-1. Conceptual: Explain the difference between a stack and a queue. In what situations would you use one over the other?
+Conceptual: Explain the difference between a stack and a queue. When would you use each data structure?
 
-2. Critical Thinking: Write a function that takes in a string and returns the most common character(s) in the string. If there are multiple characters that occur equally as the most frequent, return all of them.
+Note: This is an open-ended question, so there is no specific right or wrong answer. I'm looking for a good understanding of the concepts and the ability to differentiate between the two data structures.
 
-3. Conceptual: What is the difference between an abstract class and an interface in Java?
+# 2023-05-20 23:30:33.712103
++/q
 
-4. Critical Thinking: Given an array of integers, write a function to find the maximum sum of any contiguous subarray of the array.
+# 2023-05-20 23:32:40.592134
++I'm ready
+user: I'm ready
+AI: Great! Let's begin. 
 
-5. Conceptual: Explain the difference between a recursive function and an iterative function. In what situations would you use one over the other?
+### Question 1 (CS Conceptual): 
+What is the difference between a stack and a queue, and when would you use one over the other?
 
-# 2023-05-20 22:59:18.398458
+# 2023-05-20 23:32:47.567141
++/q
+
+# 2023-05-20 23:33:50.632032
++I'm ready
+user: I'm ready
+AI: Great! Let's begin.
+
+Conceptual question: Can you explain what recursion is and give an example of a problem that can be solved with it?
+
+# 2023-05-20 23:33:56.999157
++/1
+user: /1
+AI: Coding-based question: Given two strings, write a function to check if they are one edit (or zero edits) away. An edit can be a single character insert, delete, or replace. What is the time complexity of your implementation?
+
+# 2023-05-20 23:34:02.415111
++/q
+
+# 2023-05-20 23:35:23.105286
++I'm rady
+user: I'm rady
+AI: Great! Let's get started!
+
+Question 1 (Conceptual):
+What is the difference between a stack and a queue? Can you give an example of a scenario where you would use each of them?
+
+# 2023-05-20 23:35:29.718795
++/q
+
+# 2023-05-20 23:36:44.656075
++I'm ready
+user: I'm ready
+AI: Great! Let's start with the first question.
+
+Conceptual Question:
+1. What is the difference between procedural and object-oriented programming? Can you give me an example of a language that supports both paradigms?
+
+# 2023-05-20 23:36:50.495082
++/q
+
+# 2023-05-20 23:37:37.296535
++I'm ready
+user: I'm ready
+AI: Great! Let's begin with the first question.
+
+Conceptual Question:
+What is the difference between a stack and a queue? Please explain their operations and provide an example of one practical implementation for each of them.
+
+# 2023-05-20 23:37:50.495609
++/q
+
+# 2023-05-20 23:39:17.632709
++I'm ready
+user: I'm ready
+AI: Great! Let's start with the first question.
+
+Conceptual Question:
+Can you explain the difference between a stack and a queue? And in which circumstances would you choose one over the other?
+
+# 2023-05-20 23:39:24.655390
 +/q
