@@ -31,10 +31,6 @@ AI leetcode interviewer that assesses tech applicants. Built on Langchain and Op
 -   For the email text, I used langchain to summarize the transcript and provide scores, stats, and give verdict on candidate
 -   timestamps to measure speed; you can see how long the candidate took for each question, possible flagging if they answer too fast
 
-**Prompting**
-
--   cut down Ack's original prompt to save tokens- AI interviewer: provides focused and structured interviews, asking one question at a time and ensuring comprehension by asking follow-up questions before moving to the next question
-
 ---
 
 # How to set up CLI
